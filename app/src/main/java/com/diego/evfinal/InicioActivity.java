@@ -11,7 +11,7 @@ import com.diego.evfinal.databinding.ActivityInicioBinding;
 
 public class InicioActivity extends AppCompatActivity {
 
-  private static final int delay = 5000;
+
   private ActivityInicioBinding binding;
   private SharedPreferences sharedPreferences;
 
@@ -36,16 +36,6 @@ public class InicioActivity extends AppCompatActivity {
       startActivity(intent);
       finish();
     });
-
-
-//    new Handler().postDelayed(new Runnable() {
-//      @Override
-//      public void run() {
-//        Intent intent = new Intent(InicioActivity.this, LoginActivity.class);
-//        startActivity(intent);
-//        finish();
-//      }
-//    }, delay);
   }
 
 

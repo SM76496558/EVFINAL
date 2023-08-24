@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.diego.evfinal.R;
-import com.diego.evfinal.data.response.PeliculasResponse;
 import com.diego.evfinal.data.retrofit.RetrofitHelper;
 import com.diego.evfinal.databinding.FragmentMainBinding;
 import com.diego.evfinal.model.Peliculas;
@@ -31,7 +30,6 @@ public class MainFragment extends Fragment {
   private RVPeliculasAdapter adapter;
 
 
-
 //  @Override
 //  public void onCreate(Bundle savedInstanceState) {
 //    super.onCreate(savedInstanceState);
@@ -48,30 +46,25 @@ public class MainFragment extends Fragment {
   }
 
 
-
   @Override
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
     recyclerView = view.findViewById(R.id.rvPeliculas);
     LinearLayoutManager layoutManager = new LinearLayoutManager(view.getContext(), LinearLayoutManager.VERTICAL, false);
     binding.rvPeliculas.setLayoutManager(layoutManager);
-
-
-
-
-  RetrofitHelper.getService().getPeliculas().enqueue(new Callback<List<Peliculas>>() {
-    @Override
-    public void onResponse(Call<List<Peliculas>> call, Response<List<Peliculas>> response) {
+    RetrofitHelper.getService().getPeliculas().enqueue(new Callback<List<Peliculas>>() {
+      @Override
+      public void onResponse(Call<List<Peliculas>> call, Response<List<Peliculas>> response) {
         List<Peliculas> items = response.body();
         RVPeliculasAdapter adapter = new RVPeliculasAdapter(items);
         recyclerView.setAdapter(adapter);
-    }
+      }
 
-    @Override
-    public void onFailure(Call<List<Peliculas>> call, Throwable t) {
+      @Override
+      public void onFailure(Call<List<Peliculas>> call, Throwable t) {
 
-    }
-  });
+      }
+    });
   }
 }
 

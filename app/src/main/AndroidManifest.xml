@@ -36,6 +36,9 @@
         <activity android:name=".DetallePelicula" android:exported="true">
 
         </activity>
+        <activity android:name=".FavoritosActivity" android:exported="true">
+
+        </activity>
     </application>
 
 </manifest>

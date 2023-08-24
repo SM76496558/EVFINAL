@@ -92,13 +92,11 @@ public class RVPeliculasAdapter extends RecyclerView.Adapter<RVPeliculasAdapter.
     public void bind(Peliculas pelicula) {
 
       binding.txtTitle.setText(pelicula.getTitle());
-      binding.txtTitleJapanese.setText(pelicula.getOriginal_title_romanised());
-      binding.txtDescripcion.setText(pelicula.getDescription());
+      binding.txtTitleJapanese.setText(pelicula.getOriginal_title());
+      binding.txtReleaseDate.setText(pelicula.getRelease_date());
       ImageLoader imageLoader = Coil.imageLoader(binding.getRoot().getContext());
       ImageRequest request = new ImageRequest.Builder(binding.getRoot().getContext()).data(pelicula.getMovie_banner()).crossfade(true).target(binding.imgPelicula).build();
       imageLoader.enqueue(request);
-
-
     }
   }
 }

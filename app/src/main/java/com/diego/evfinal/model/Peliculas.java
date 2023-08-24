@@ -15,6 +15,11 @@ public class Peliculas {
   private String running_time;
   private String rt_score;
 
+  public Peliculas() {
+
+  }
+
+
   public Peliculas(String id, String title, String original_title, String original_title_romanised, String image, String movie_banner, String description, String director, String producer, String release_date, String running_time, String rt_score) {
     this.id = id;
     this.title = title;
@@ -29,6 +34,7 @@ public class Peliculas {
     this.running_time = running_time;
     this.rt_score = rt_score;
   }
+
 
   public String getId() {
     return id;

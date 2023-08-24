@@ -12,7 +12,8 @@
     <item
         android:id="@+id/favorites"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_star"/>
+        android:icon="@drawable/ic_star"
+        android:title="Favorites" />
     <item
         android:id="@+id/logout"
         app:showAsAction="ifRoom"

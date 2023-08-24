@@ -3,64 +3,66 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    >
+    android:layout_marginHorizontal="4dp">
 
 
     <ImageView
         android:id="@+id/imgPelicula"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="200dp"
         android:layout_marginHorizontal="14dp"
         android:layout_marginTop="14dp"
         android:alpha="0.7"
-
         android:contentDescription="@null"
         android:scaleType="centerCrop"
+        android:src="@drawable/iniciobg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtTitleJapanese"
+        android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="26dp"
         android:layout_marginVertical="10dp"
-        android:textColor="@android:color/white"
         android:text="Letras Japonesas"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="@+id/imgPelicula"
         app:layout_constraintStart_toStartOf="@+id/imgPelicula" />
+
+    <TextView
+        android:id="@+id/txtReleaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="26dp"
+        android:layout_marginVertical="10dp"
+        android:text="Letras Japonesas"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/imgPelicula"
+        app:layout_constraintEnd_toEndOf="@+id/imgPelicula" />
 
     <TextView
         android:id="@+id/txtTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Titulo:"
         android:layout_marginVertical="10dp"
-        app:layout_constraintStart_toStartOf="@+id/imgPelicula"
+        android:text="Titulo original:"
+
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgPelicula" />
 
     <TextView
-        android:id="@+id/txtTitle"
-        android:layout_width="wrap_content"
+        android:id="@+id/txtTitleJapanese"
+        android:layout_width="206dp"
         android:layout_height="wrap_content"
-        android:text="Castle in the Skye"
         android:layout_marginVertical="10dp"
         android:layout_marginStart="2dp"
+        android:text="Castle in the Skye"
 
         app:layout_constraintStart_toEndOf="@+id/txtTitulo"
         app:layout_constraintTop_toBottomOf="@+id/imgPelicula" />
 
-    <TextView
-        android:id="@+id/txtDescripcion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-       android:layout_marginTop="30dp"
-        android:layout_marginBottom="12dp"
-        android:text="Loremasdasdasdasdas"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imgPelicula"
-        app:layout_constraintTop_toBottomOf="@+id/imgPelicula" />
 
 
 
