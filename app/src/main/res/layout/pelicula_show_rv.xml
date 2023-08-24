@@ -3,7 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="6dp">
+    android:layout_marginHorizontal="6dp"
+    >
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:background="#6D403535"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgPelicula"
+        app:layout_constraintEnd_toEndOf="@+id/imgPelicula"
+        app:layout_constraintStart_toStartOf="@+id/imgPelicula"
+        app:layout_constraintTop_toTopOf="@+id/imgPelicula" />
 
 
     <ImageView
@@ -12,7 +25,6 @@
         android:layout_height="200dp"
         android:layout_marginHorizontal="14dp"
         android:layout_marginTop="14dp"
-        android:alpha="0.7"
         android:contentDescription="@null"
         android:scaleType="centerCrop"
         android:src="@drawable/iniciobg"
@@ -27,6 +39,7 @@
         android:layout_marginHorizontal="26dp"
         android:layout_marginVertical="10dp"
         android:text="Letras Japonesas"
+        android:elevation="21dp"
         android:textColor="@android:color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imgPelicula"
@@ -39,6 +52,7 @@
         android:layout_marginHorizontal="26dp"
         android:layout_marginVertical="10dp"
         android:text="Letras Japonesas"
+        android:elevation="21dp"
         android:textColor="@android:color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imgPelicula"

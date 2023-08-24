@@ -1,6 +1,5 @@
 package com.diego.evfinal.data.retrofit;
 
-import com.diego.evfinal.data.response.PeliculasResponse;
 import com.diego.evfinal.model.Peliculas;
 
 import java.util.List;

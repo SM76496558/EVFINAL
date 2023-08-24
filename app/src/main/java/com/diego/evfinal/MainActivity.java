@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.diego.evfinal.databinding.ActivityMainBinding;
 import com.diego.evfinal.fragments.MainFragment;
-import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
   private void addHomeFragment() {
     getSupportFragmentManager().beginTransaction().add(binding.fcvMain.getId(), new MainFragment()).commit();
   }
-
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
     getMenuInflater().inflate(R.menu.menu_items, menu);
@@ -45,10 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
   @Override
   public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-    if (item.getItemId() == R.id.search) {
-      Snackbar.make(binding.getRoot(), "Search", Snackbar.LENGTH_SHORT).show();
-      return true;
-    } else if (item.getItemId() == R.id.favorites) {
+    if (item.getItemId() == R.id.favorites) {
       Intent intent = new Intent(this, FavoritosActivity.class);
       startActivity(intent);
       return true;

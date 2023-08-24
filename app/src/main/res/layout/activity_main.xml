@@ -16,7 +16,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:subtitleTextColor="@color/cardview_dark_background">
+        app:titleTextColor="@color/white">
 
 
     </androidx.appcompat.widget.Toolbar>
@@ -32,17 +32,6 @@
 
 
 
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fab_add_movie"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="bottom|end"-->
-<!--        android:layout_margin="16dp"-->
-<!--        android:contentDescription="@null"-->
-<!--        android:src="@drawable/ic_add"-->
-<!--        app:elevation="8dp"-->
-<!--        app:fabSize="normal"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent" />-->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

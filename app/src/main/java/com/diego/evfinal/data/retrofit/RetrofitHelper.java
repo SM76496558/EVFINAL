@@ -30,7 +30,6 @@ public final class RetrofitHelper {
   }
 
 
-
   public static OkHttpClient.Builder getLogginBuilder() {
     HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
     interceptor.level(HttpLoggingInterceptor.Level.BODY);

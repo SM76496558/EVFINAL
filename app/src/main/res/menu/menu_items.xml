@@ -4,15 +4,11 @@
 
 
 
-    <item
-        android:id="@+id/search"
-        app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_search"
-        android:title="Buscar" />
+
     <item
         android:id="@+id/favorites"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_star"
+        android:icon="@drawable/baseline_star_rate_24"
         android:title="Favorites" />
     <item
         android:id="@+id/logout"

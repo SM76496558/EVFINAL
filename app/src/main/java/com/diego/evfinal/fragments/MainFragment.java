@@ -62,7 +62,7 @@ public class MainFragment extends Fragment {
 
       @Override
       public void onFailure(Call<List<Peliculas>> call, Throwable t) {
-
+          System.out.println(t);
       }
     });
   }

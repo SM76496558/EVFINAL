@@ -8,7 +8,6 @@ import java.util.List;
 public class PeliculasResponse {
   @SerializedName("peliculasList")
   private List<Peliculas> peliculasList;
-
   public List<Peliculas> getPeliculasList() {
     return peliculasList;
   }
