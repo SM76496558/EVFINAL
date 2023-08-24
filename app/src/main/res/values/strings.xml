@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">CrunchyRoll</string>
+    <string name="app_name">Studio Ghibli App</string>
     <string name="txtStartUp">Welcome</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btnInicio">Welcome</string>
+    <string name="btnFavorites">Add to favorites</string>
+
 </resources>

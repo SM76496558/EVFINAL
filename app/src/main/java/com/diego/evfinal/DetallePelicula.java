@@ -1,8 +1,6 @@
 package com.diego.evfinal;
 
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,32 +14,42 @@ public class DetallePelicula extends AppCompatActivity {
 
 
   private ActivityDetallePeliculaBinding binding;
-
-  public static final String TITLE = "title";
   public static final String IMAGE = "image";
+  public static final String TITLE = "title";
+  public static final String ORIGINALTITLE = "originaltitle";
+  public static final String DIRECTOR = "director";
+  public static final String RELEASEDATE = "releasedate";
+  public static final String DESCRIPTION = "description";
+
 
   @Override
+
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     binding = ActivityDetallePeliculaBinding.inflate(getLayoutInflater());
     setContentView(binding.getRoot());
 
-
-    String titulo = getIntent().getStringExtra(TITLE);
     String image = getIntent().getStringExtra(IMAGE);
-
-    binding.txtTitleDetalle.setText(titulo);
+    String titulo = getIntent().getStringExtra(TITLE);
+    String originalTitulo = getIntent().getStringExtra(ORIGINALTITLE);
+    String director = getIntent().getStringExtra(DIRECTOR);
+    String releaseDate = getIntent().getStringExtra(RELEASEDATE);
+    String descripcion = getIntent().getStringExtra(DESCRIPTION);
 
     ImageLoader imageLoader = Coil.imageLoader(binding.getRoot().getContext());
     ImageRequest request = new ImageRequest.Builder(binding.getRoot().getContext()).data(image).crossfade(true).target(binding.imgPeliculaDetalle).build();
     imageLoader.enqueue(request);
 
+    binding.txtTitleDetalle.setText(titulo);
+    binding.txtOriginalTitle.setText(originalTitulo);
+    binding.txtDirector.setText(director);
+    binding.txtReleaseDate.setText(releaseDate);
+    binding.txtDescripcionDetalle.setText(descripcion);
+
+
+
 
   }
-
-
-
-
 
 
 }

@@ -1,8 +1,10 @@
 package com.diego.evfinal;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -25,10 +27,6 @@ public class MainActivity extends AppCompatActivity {
     sharedPreferences = getSharedPreferences(LoginActivity.SESSION_PREFERENCE, MODE_PRIVATE);
     setContentView(binding.getRoot());
 
-//    boolean isSessionActivated = sharedPreferences.getBoolean(LoginActivity.SESSION_ACTIVATED, false);
-//    if (isSessionActivated) {
-//      Intent intent = new Intent(this, InicioActivity.class);
-//    }
     binding.fabAddMovie.setOnClickListener(v -> {
       Snackbar.make(binding.getRoot(), "Añadiste una pelicula/OVA", Snackbar.LENGTH_SHORT).show();
     });
@@ -56,14 +54,36 @@ public class MainActivity extends AppCompatActivity {
 //      Snackbar.make(binding.getRoot(), "Settings", Snackbar.LENGTH_SHORT).show();
 //      return true;
     } else if (item.getItemId() == R.id.logout) {
-      sharedPreferences.edit().clear().apply();
-      Intent intent = new Intent(this, LoginActivity.class);
-      startActivity(intent);
-      finish();
+
+      showLogoutDialog();
       return true;
 
     } else {
       return false;
     }
+  }
+
+  private void showLogoutDialog() {
+    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    builder.setTitle("Cerrar sesión");
+    builder.setMessage("¿Estás seguro de que deseas cerrar sesión?");
+    builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+      @Override
+      public void onClick(DialogInterface dialog, int which) {
+        sharedPreferences.edit().clear().apply();
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(intent);
+        finish();
+
+      }
+    });
+    builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+      @Override
+      public void onClick(DialogInterface dialog, int which) {
+        dialog.dismiss();
+      }
+    });
+    AlertDialog dialog = builder.create();
+    dialog.show();
   }
 }

@@ -1,6 +1,7 @@
 package com.diego.evfinal;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -12,6 +13,7 @@ public class InicioActivity extends AppCompatActivity {
 
   private static final int delay = 5000;
   private ActivityInicioBinding binding;
+  private SharedPreferences sharedPreferences;
 
 
   @Override
@@ -19,17 +21,31 @@ public class InicioActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     binding = ActivityInicioBinding.inflate(getLayoutInflater());
     setContentView(binding.getRoot());
-    binding.txtInicioUp.setText(R.string.txtStartUp);
+    sharedPreferences = getSharedPreferences(LoginActivity.SESSION_PREFERENCE, MODE_PRIVATE);
+    setContentView(binding.getRoot());
+    boolean isSessionActivated = sharedPreferences.getBoolean(LoginActivity.SESSION_ACTIVATED, false);
+
+    if (isSessionActivated){
+      Intent intent = new Intent(this, MainActivity.class);
+      startActivity(intent);
+      finish();
+    }
+
+    binding.btnGetStarted.setOnClickListener(v -> {
+      Intent intent = new Intent(this, LoginActivity.class);
+      startActivity(intent);
+      finish();
+    });
 
 
-    new Handler().postDelayed(new Runnable() {
-      @Override
-      public void run() {
-        Intent intent = new Intent(InicioActivity.this, LoginActivity.class);
-        startActivity(intent);
-        finish();
-      }
-    }, delay);
+//    new Handler().postDelayed(new Runnable() {
+//      @Override
+//      public void run() {
+//        Intent intent = new Intent(InicioActivity.this, LoginActivity.class);
+//        startActivity(intent);
+//        finish();
+//      }
+//    }, delay);
   }
 
 

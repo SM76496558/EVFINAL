@@ -54,8 +54,12 @@ public class RVPeliculasAdapter extends RecyclerView.Adapter<RVPeliculasAdapter.
           public void onResponse(Call<Peliculas> call, Response<Peliculas> response) {
             if (response.isSuccessful()) {
               Intent intent = new Intent(view.getContext(), DetallePelicula.class);
-              intent.putExtra(DetallePelicula.TITLE, peliculas.get(position).getTitle());
               intent.putExtra(DetallePelicula.IMAGE, peliculas.get(position).getImage());
+              intent.putExtra(DetallePelicula.TITLE, peliculas.get(position).getTitle());
+              intent.putExtra(DetallePelicula.ORIGINALTITLE, peliculas.get(position).getOriginal_title());
+              intent.putExtra(DetallePelicula.DIRECTOR, peliculas.get(position).getDirector());
+              intent.putExtra(DetallePelicula.RELEASEDATE, peliculas.get(position).getRelease_date());
+              intent.putExtra(DetallePelicula.DESCRIPTION, peliculas.get(position).getDescription());
               view.getContext().startActivity(intent);
             }
           }

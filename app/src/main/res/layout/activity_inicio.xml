@@ -13,40 +13,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@null"
-        android:scaleType="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/iniciobg"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtInicioUp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginBottom="36dp"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="21dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/inicioImage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/txtInicio"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginBottom="36dp"
+
+    <Button
+        android:id="@+id/btn_get_started"
+        android:layout_width="210dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="42dp"
+        android:padding="10dp"
+        android:text="@string/btnInicio"
         android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="21dp"
+        android:textSize="13sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inicioImage" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

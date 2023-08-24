@@ -2,4 +2,6 @@
 <resources>
     <string name="app_name">EV_FINAL</string>
     <string name="txtStartUp">Bienvenido(a)</string>
+    <string name="btnInicio">Iniciar</string>
+    <string name="btnFavorites">Agregar a favoritos</string>
 </resources>

@@ -15,7 +15,8 @@ public class LoginActivity extends AppCompatActivity {
 
   private ActivityLoginBinding binding;
   public static String SESSION_PREFERENCE = "SESSION_PREFERENCE";
-  public static String SESSION_ACTIVATED = "SESSION_ACTIVATED";
+  public static String SESSION_ACTIVATED= "SESSION_ACTIVATED";
+
 
 
 
