@@ -94,6 +94,7 @@ public class RVPeliculasAdapter extends RecyclerView.Adapter<RVPeliculasAdapter.
       binding.txtTitle.setText(pelicula.getTitle());
       binding.txtTitleJapanese.setText(pelicula.getOriginal_title());
       binding.txtReleaseDate.setText(pelicula.getRelease_date());
+      binding.txtDuration.setText(pelicula.getRunning_time() + " min");
       ImageLoader imageLoader = Coil.imageLoader(binding.getRoot().getContext());
       ImageRequest request = new ImageRequest.Builder(binding.getRoot().getContext()).data(pelicula.getMovie_banner()).crossfade(true).target(binding.imgPelicula).build();
       imageLoader.enqueue(request);

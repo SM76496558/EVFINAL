@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="4dp">
+    android:layout_marginHorizontal="6dp">
 
 
     <ImageView
@@ -28,6 +28,7 @@
         android:layout_marginVertical="10dp"
         android:text="Letras Japonesas"
         android:textColor="@android:color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imgPelicula"
         app:layout_constraintStart_toStartOf="@+id/imgPelicula" />
 
@@ -39,6 +40,7 @@
         android:layout_marginVertical="10dp"
         android:text="Letras Japonesas"
         android:textColor="@android:color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imgPelicula"
         app:layout_constraintEnd_toEndOf="@+id/imgPelicula" />
 
@@ -54,13 +56,26 @@
 
     <TextView
         android:id="@+id/txtTitleJapanese"
-        android:layout_width="206dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
         android:layout_marginStart="2dp"
         android:text="Castle in the Skye"
 
         app:layout_constraintStart_toEndOf="@+id/txtTitulo"
+        app:layout_constraintTop_toBottomOf="@+id/imgPelicula" />
+
+    <TextView
+        android:id="@+id/txtDuration"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="32dp"
+
+        android:textAlignment="center"
+        android:text="120min"
+        app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintTop_toBottomOf="@+id/imgPelicula" />
 
 
